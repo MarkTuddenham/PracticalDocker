@@ -8,8 +8,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     build-essential \
     git \
     wget \
-    curl \
-    libglib2.0-0 libsm6 libxrender1 libfontconfig1 libxrender-dev libxext6
+    curl 
 
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
