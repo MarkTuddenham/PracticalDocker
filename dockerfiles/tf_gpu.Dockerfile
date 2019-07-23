@@ -39,7 +39,7 @@ ENTRYPOINT ["tini", "-g", "--"]
 
 
 # Install Python 3 packages
-RUN pip3 install -U \
+RUN pip3 install --no-cache-dir -U \
     pip \
     wheel \
     jupyter \
@@ -74,5 +74,5 @@ WORKDIR /docs
 CMD ["start.sh"]
 
 # Add local files as late as possible
-COPY start.sh /usr/local/bin/
-COPY jupyter_notebook_config.py /etc/jupyter/
+COPY context/start.sh /usr/local/bin/
+COPY context/jupyter_notebook_config.py /etc/jupyter/
