@@ -1,5 +1,6 @@
 # Copyright (c) Mark Tuddenham
-FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
+# FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
+FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
 
 LABEL maintainer="Mark Tuddenham"
 
