@@ -9,7 +9,10 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     build-essential \
     git \
     wget \
-    curl 
+    curl \
+    && apt-get purge \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
@@ -18,7 +21,9 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     nodejs \
     python3-dev \
     python3-pip \
-    python3-setuptools \
+    python3-setuptools \  
+    && apt-get purge \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 RUN echo "en_GB.UTF-8 UTF-8" > /etc/locale.gen && \
